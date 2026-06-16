@@ -14,12 +14,12 @@ The project is organized as a four-notebook workflow, moving from data cleaning 
 
 ## Notebook Workflow
 
-| Notebook                               | Purpose                                                                       |
-| -------------------------------------- | ----------------------------------------------------------------------------- |
-| `customer-churn-eda.ipynb`             | Cleans the dataset, creates churn features, and explores major churn patterns |
-| `customer-churn-insights.ipynb`        | Builds customer segments and identifies high-risk churn groups                |
-| `customer-churn-modeling.ipynb`        | Trains and compares churn prediction models                                   |
-| `customer-churn-recommendations.ipynb` | Combines segment and model findings into business recommendations             |
+| Notebook | Purpose |
+|---|---|
+| `customer-churn-eda.ipynb` | Cleans the dataset, creates churn features, and explores major churn patterns |
+| `customer-churn-insights.ipynb` | Builds customer segments and identifies high-risk churn groups |
+| `customer-churn-modeling.ipynb` | Trains and compares churn prediction models |
+| `customer-churn-recommendations.ipynb` | Combines segment and model findings into business recommendations |
 
 ## Dataset
 
@@ -33,13 +33,13 @@ The overall churn rate was **26.54%**.
 
 Several customer groups had much higher churn risk:
 
-| Segment                                        | Churn Rate |
-| ---------------------------------------------- | ---------: |
-| Customers with all 5 risk factors              |     71.85% |
-| Combined high-risk profile                     |     71.16% |
-| Fiber optic + electronic check customers       |     53.23% |
-| Month-to-month + 0-12 months tenure customers  |     51.35% |
-| No online security + no tech support customers |     48.96% |
+| Segment | Churn Rate |
+|---|---:|
+| Customers with all 5 risk factors | 71.85% |
+| Combined high-risk profile | 71.16% |
+| Fiber optic + electronic check customers | 53.23% |
+| Month-to-month + 0-12 months tenure customers | 51.35% |
+| No online security + no tech support customers | 48.96% |
 
 The analysis showed that churn risk increases sharply when multiple risk factors appear together.
 
@@ -49,13 +49,13 @@ The modeling notebook compared a dummy baseline, Logistic Regression, Random For
 
 The final selected model was **Logistic Regression with a 0.55 prediction threshold**.
 
-| Metric    |  Score |
-| --------- | -----: |
-| Accuracy  | 75.30% |
+| Metric | Score |
+|---|---:|
+| Accuracy | 75.30% |
 | Precision | 52.43% |
-| Recall    | 75.13% |
-| F1-score  | 61.76% |
-| ROC-AUC   | 84.16% |
+| Recall | 75.13% |
+| F1-score | 61.76% |
+| ROC-AUC | 84.16% |
 
 Logistic Regression was selected because churn prediction is focused on identifying customers likely to leave. In this context, recall and F1-score were more important than accuracy alone.
 
@@ -71,46 +71,91 @@ Based on the analysis, the company should:
 
 ## Repository Structure
 
-Repository folders:
-
-* `notebooks/`: four project notebooks
-* `data/`: dataset source instructions
-* `outputs/`: generated project outputs
-* `requirements.txt`: Python dependencies
-* `.gitignore`: files excluded from Git
+```text
+customer-churn-prediction/
+├── notebooks/
+│   ├── customer-churn-eda.ipynb
+│   ├── customer-churn-insights.ipynb
+│   ├── customer-churn-modeling.ipynb
+│   └── customer-churn-recommendations.ipynb
+├── data/
+│   └── README.md
+├── outputs/
+│   ├── README.md
+│   ├── churn_recommendations.csv
+│   ├── final_model_summary.csv
+│   ├── key_churn_segments.csv
+│   ├── model_comparison_results.csv
+│   └── other generated output files
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
 ## Tools Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* scikit-learn
-* Jupyter Notebook
-* Kaggle
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- scikit-learn
+- Jupyter Notebook
+- Kaggle
+
+## Skills Demonstrated
+
+- Data cleaning
+- Exploratory data analysis
+- Customer segmentation
+- Feature preparation
+- Classification modeling
+- Model evaluation
+- Threshold tuning
+- Business recommendation development
+- Portfolio-ready notebook organization
 
 ## How to Run
 
 Clone this repository:
 
-`git clone https://github.com/anav24/customer-churn-prediction.git`
-
-Move into the project folder:
-
-`cd customer-churn-prediction`
+```bash
+git clone https://github.com/anav24/customer-churn-prediction.git
+cd customer-churn-prediction
+```
 
 Install dependencies:
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
-Download the Telco Customer Churn dataset and place the raw CSV in the `data/` folder.
+Download the Telco Customer Churn dataset and place the raw CSV here:
 
-Run the notebooks in order:
+```text
+data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+```
 
-1. `customer-churn-eda.ipynb`
-2. `customer-churn-insights.ipynb`
-3. `customer-churn-modeling.ipynb`
-4. `customer-churn-recommendations.ipynb`
+Run the notebooks in this order:
+
+```text
+notebooks/customer-churn-eda.ipynb
+notebooks/customer-churn-insights.ipynb
+notebooks/customer-churn-modeling.ipynb
+notebooks/customer-churn-recommendations.ipynb
+```
+
+Each notebook saves its generated CSV files to the `outputs/` folder when run locally. On Kaggle, outputs are saved to `/kaggle/working`.
+
+## Next Improvements
+
+Possible future improvements include:
+
+- Hyperparameter tuning
+- Cross-validation
+- Feature importance analysis
+- SHAP model interpretation
+- Retention campaign simulation
+- Dashboard version of the final recommendations
 
 ## Project Summary
 
