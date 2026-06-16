@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.venv/
+venv/
+env/
+
+# Local raw data
+# Keep raw dataset files out of the repo unless the dataset license clearly allows redistribution.
+data/*.csv
+
+# Kaggle-generated artifacts
+__results__.html
+__output__.json
+custom.css
+__results___files/
+
+# OS files
+.DS_Store
+Thumbs.db

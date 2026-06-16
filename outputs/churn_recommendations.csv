@@ -1,0 +1,6 @@
+Recommendation,Reason,Suggested_Action
+Prioritize new month-to-month customers,Month-to-month customers with 0-12 months of tenure had a 51.35% churn rate.,"Offer early contract incentives, loyalty discounts, or proactive check-ins."
+Target fiber optic customers using electronic checks,Fiber optic customers using electronic checks had a 53.23% churn rate.,"Review billing experience, payment friction, and service satisfaction for this group."
+Promote online security and tech support,Customers without both online security and tech support had a 48.96% churn rate.,Bundle support services or offer limited-time trials for high-risk customers.
+Use churn model scores for retention outreach,The final model identified about 75% of churned customers in the test set.,Rank customers by predicted churn probability and contact the highest-risk group first.
+Create onboarding follow-up for first-year customers,Newer customers were one of the highest-risk groups across the analysis.,"Create a 30-day, 60-day, and 90-day onboarding support workflow."
