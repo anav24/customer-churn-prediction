@@ -13,14 +13,8 @@ venv/
 env/
 
 # Local raw data
-# Keep raw dataset files out of the repo unless the dataset license clearly allows redistribution.
+# The original raw dataset is not stored in this repository.
 data/*.csv
-
-# Kaggle-generated artifacts
-__results__.html
-__output__.json
-custom.css
-__results___files/
 
 # OS files
 .DS_Store
